@@ -18,6 +18,7 @@ from evennia import default_cmds
 from evennia import Command
 from commands.tweet import CmdTweet
 from evennia.contrib.barter import CmdTrade
+from evennia.contrib import turnbattle
 
 class CharacterCmdSet(default_cmds.CharacterCmdSet):
     """
@@ -37,6 +38,7 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         #
         self.add(CmdTweet())
         self.add(CmdTrade())
+        self.add(turnbattle.BattleCmdSet())
 
 class AccountCmdSet(default_cmds.AccountCmdSet):
     """
