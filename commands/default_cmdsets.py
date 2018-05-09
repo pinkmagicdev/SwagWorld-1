@@ -17,6 +17,7 @@ own cmdsets by inheriting from them or directly from `evennia.CmdSet`.
 from evennia import default_cmds
 from evennia import Command
 from commands.tweet import CmdTweet
+from evennia.contrib.barter import CmdTrade
 
 class CharacterCmdSet(default_cmds.CharacterCmdSet):
     """
@@ -35,6 +36,7 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         # any commands you add below will overload the default ones.
         #
         self.add(CmdTweet())
+        self.add(CmdTrade())
 
 class AccountCmdSet(default_cmds.AccountCmdSet):
     """
